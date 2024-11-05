@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vpbr68iz0-python-gitops
+  description: This is GitOps manifest for vpbr68iz0-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vpbr68iz0-python
+    backstage.io/kubernetes-id: vpbr68iz0-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: vpbr68iz0-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vpbr68iz0-python
